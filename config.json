@@ -1,0 +1,117 @@
+{
+  "camera": {
+    "source": 0,
+    "width": 640,
+    "height": 480,
+    "flip": true,
+    "fps": 30,
+    "fourcc": ""
+  },
+  "tracker": {
+    "max_hands": 2,
+    "model_path": "models/hand_landmarker.task",
+    "min_detection_confidence": 0.7,
+    "min_tracking_confidence": 0.6
+  },
+  "pointer": {
+    "landmark": 5,
+    "alt_landmark": 8,
+    "lost_reset_seconds": 0.3,
+    "min_move_px": 2
+  },
+  "zone": {
+    "x_min": 0.2,
+    "y_min": 0.15,
+    "x_max": 0.8,
+    "y_max": 0.65,
+    "lock_aspect": true
+  },
+  "smoothing": {
+    "method": "one_euro",
+    "ema_alpha": 0.5,
+    "one_euro_min_cutoff": 1.0,
+    "one_euro_beta": 0.03,
+    "one_euro_d_cutoff": 1.0,
+    "glide_enabled": true,
+    "glide_tau_seconds": 0.025,
+    "glide_lead_seconds": 0.025,
+    "glide_rate_hz": 125
+  },
+  "gestures": {
+    "extended_threshold": 1.35,
+    "not_hidden_threshold": 0.95,
+    "pinch_on": 0.3,
+    "pinch_off": 0.45,
+    "pinch_approach": 0.7,
+    "pinch_confirm_frames": 2,
+    "release_confirm_frames": 2,
+    "pinch_ambiguity_margin": 0.06,
+    "drag_hold_seconds": 0.35,
+    "right_click_enabled": true,
+    "right_click_max_seconds": 0.8,
+    "fist_release_seconds": 0.25,
+    "pose_hold_seconds": 0.12,
+    "lost_grace_seconds": 0.3,
+    "anchor_lookback_default": 0.15,
+    "anchor_lookback_min": 0.05,
+    "anchor_lookback_max": 0.35,
+    "clutch_catchup": 0.6
+  },
+  "scroll": {
+    "enabled": true,
+    "enter_hold_seconds": 0.15,
+    "exit_hold_seconds": 0.12,
+    "deadzone": 0.2,
+    "full_speed_offset": 1.0,
+    "max_notches_per_second": 18,
+    "response_power": 1.6,
+    "offset_smoothing": 0.5,
+    "invert": false,
+    "units_per_notch": "auto",
+    "min_chunk_units": "auto"
+  },
+  "modes": {
+    "default": "mouse",
+    "available": ["mouse", "presentation", "game"]
+  },
+  "controls": {
+    "quit_key": "q",
+    "next_mode_key": "m",
+    "toggle_control_key": "c",
+    "toggle_pointer_key": "p",
+    "show_hud": true
+  },
+  "safety_switch": {
+    "enabled": true,
+    "off_hold_seconds": 3.0,
+    "on_hold_seconds": 2.0,
+    "cooldown_seconds": 1.5,
+    "beep": true
+  },
+  "presentation": {
+    "next_key": "right",
+    "prev_key": "left",
+    "window_seconds": 0.5,
+    "min_distance": 1.8,
+    "min_speed": 4.0,
+    "axis_ratio": 2.0,
+    "cooldown_seconds": 0.8,
+    "opposite_block_seconds": 1.0
+  },
+  "game": {
+    "jump_key": "space",
+    "duck_key": "down"
+  },
+  "safety": {
+    "start_enabled": false,
+    "pyautogui_failsafe": true,
+    "pyautogui_pause": 0.0,
+    "edge_margin_px": 2
+  },
+  "debug": {
+    "show_landmarks": true,
+    "show_zone": true,
+    "show_fps": true,
+    "show_timing": true
+  }
+}
